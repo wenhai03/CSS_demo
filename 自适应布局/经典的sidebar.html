@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <style>
+    /*
+
+    经典的 sidebar
+    grid-template-columns: minmax(<min>, <max>) ...
+    同样使用 grid layout，可以结合 minmax() 实现弹性的 sidebar（这在你要适应大屏幕的时候很有用）。
+    minmax(<min>, <max>) 就是字面意思。结合 <flex> 单位，非常优雅，
+    避免了数学计算宽度等不灵活的手段（比如我们设置 gap 的时候）。
+
+    */
+    body {
+      display: grid;
+      grid-template-columns: minmax(150px, 25%) 1fr;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar {
+      height: 100vh;
+
+      background: lightpink;
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    .content {
+      padding: 2rem;
+    }
+
+    body {
+      font-family: system-ui, serif;
+    }
+
+  </style>
+</head>
+<body>
+
+
+<div class="sidebar" contenteditable>
+  Min: 150px
+  <br/>
+  Max: 25%
+</div>
+<p class="content" contenteditable>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nulla architecto maxime modi nisi. Quas saepe dolorum,
+  architecto quia fugit nulla! Natus, iure eveniet ex iusto tempora animi quibusdam porro?
+</p>
+
+
+</body>
+</html>

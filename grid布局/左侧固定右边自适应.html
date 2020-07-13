@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .main {
+      display: grid;
+      width: 600px;
+      height: 600px;
+      border: 10px solid skyblue;
+
+      /*grid-template-columns: 100px 100px 100px;*/
+      /*grid-template-columns: repeat(3, 100px);*/
+      /*grid-template-columns: repeat(auto-fill, 100px);*/
+
+      /*grid-template-columns: repeat(3, 1fr); !*三等分*!*/
+      /*grid-template-columns: 1fr 2fr 3fr; !*总宽度600px 按照 1/6 2/6 3/6 划分*!*/
+
+      /*grid-template-columns: 1fr minmax(100px, 1fr);!*最小宽度*!*/
+
+      /*grid-template-columns: 100px auto 100px;*/
+
+      grid-template-columns: 100px 100px 100px;
+
+      /*row-gap: 20px;*/
+      /*column-gap: 20px;*/
+      gap: 10px;
+
+      grid-template-rows: 100px 100px 100px 100px;
+      /*grid-template-rows: 100px 100px 100px 100px;*/
+      /*justify-items: center;*/
+      /*align-items: center;*/
+
+      /*justify-content: center;*/
+      /*align-content: center;*/
+      /*grid-column-start: 3*/
+
+      grid-auto-rows: 30px;
+    }
+
+    .item {
+      font-size: 50px;
+      color: #fff;
+    }
+
+    .item-1 {
+      background-color: #ef342a;
+
+      grid-column-start: span 2;
+      justify-self: center;
+      align-self: center;
+    }
+
+    .item-2 {
+      background-color: #f68f26;
+    }
+
+    .item-3 {
+      background-color: #4ba946;
+    }
+
+    .item-4 {
+      background-color: #1cc2c1;
+    }
+
+    .item-5 {
+      background-color: #c27622;
+    }
+
+    .item-6 {
+      background-color: #babcc2;
+    }
+
+    .item-7 {
+      background-color: #2c26c2;
+    }
+
+    .item-8 {
+      background-color: #c26457;
+    }
+
+    .item-9 {
+      background-color: #58c2b3;
+    }
+
+    .item-10 {
+      background-color: #c23777;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="main">
+  <div class="item item-1">1</div>
+  <div class="item item-2">2</div>
+  <div class="item item-3">3</div>
+  <div class="item item-4">4</div>
+  <div class="item item-5">5</div>
+  <div class="item item-6">6</div>
+  <div class="item item-7">7</div>
+  <div class="item item-8">8</div>
+  <div class="item item-9">9</div>
+  <div class="item item-10">10</div>
+</div>
+
+</body>
+</html>

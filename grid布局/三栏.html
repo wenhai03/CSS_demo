@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <style>
+    .main {
+      margin: 0 auto;
+      /*background-color: pink;*/
+    }
+
+    .item {
+      font-size: 30px;
+      color: #fff;
+      height: 250px;
+      border-bottom: 1px solid #eee;
+      display: grid;
+
+      grid-template-columns: 50px auto 100px;
+      background-color: #1cc2c1;
+      align-items: center;
+    }
+    .left{
+
+    }
+    .middle{
+      display: grid;
+      grid-template-rows: 50px 40px;
+      row-gap: 10px;
+
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="main">
+  <div class="item">
+    <div class="left">1</div>
+    <div class="middle">
+      <div>主要内容1</div>
+      <div>主要内容2</div>
+      <div>主要内容3</div>
+    </div>
+    <div class="right">3</div>
+  </div>
+
+</div>
+
+</body>
+</html>
