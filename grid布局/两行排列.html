@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    article{
+        width: 300px;
+        height: 150px;
+        border: 5px solid silver;
+        display: grid;
+        /*grid-template-rows: 50% 50%;*/
+        /*grid-template-columns: 20% 20% 20% 20% 20%;*/
+
+        grid-template-rows: repeat(2, minmax(50px, 100px));
+        grid-template-columns: repeat(5, 1fr);
+    }
+    div{
+        background: chocolate;
+        padding: 5px;
+        background-clip: content-box;
+        box-sizing: border-box;
+        border: 1px solid blueviolet;
+    }
+  </style>
+</head>
+<body>
+<article>
+  <div>item1</div>
+  <div>item2</div>
+  <div>item3</div>
+  <div>item4</div>
+  <div>item5</div>
+  <div>item6</div>
+  <div>item7</div>
+  <div>item8</div>
+  <div>item9</div>
+  <div>item10</div>
+</article>
+</body>
+</html>

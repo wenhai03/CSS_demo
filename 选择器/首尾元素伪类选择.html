@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <style>
+     /* !*后代里面的第一个  h1 h2高亮*!
+      article :first-child{
+          color: red
+      }*/
+     /*同理 后代里面的最后一个都会高亮
+     article :last-child{
+         color: red
+     }*/
+
+
+     /* !*后代子元素的第一个  h1 高亮*!
+      article>:first-child{
+          color: red
+      }*/
+     /*限定后代h1元素，如果h1前面有h2就选不中，解决方法 h1:first-of-type  h1 高亮*/
+     /*article h1:first-child{
+         color: red
+     }*/
+      /* h1:first-of-type,所有元素的第一个，前面可以包含其他元素不受影响，所有元素的第一个 */
+     /*article h1:first-of-type{
+         color: red
+     }*/
+
+     /*!*同理*!
+     article h1:last-of-type{
+         color: red
+     }*/
+
+
+    /* !*子元素里面的最后一个h2，  aside里面的h2高亮*!
+     article h2:last-child{
+         color: red
+     }*/
+
+     /*所有儿子类型中是h2的最后一个*/
+     /*article>h2:last-of-type{
+         color: red
+     }*/
+
+     /*所有儿子类型中是h2的最后一个*/
+     article :only-child{
+         color: red
+     }
+
+  </style>
+</head>
+<body>
+<main>
+  <article>
+    <h2>首尾选择22</h2>
+    <h1>首尾选择</h1>
+
+    <aside>
+      <h2>
+        h2选择器1111
+      </h2>
+    </aside>
+    <div>
+      <span>我是span元素</span>
+    </div>
+
+    <h2>
+      h2选择器2222
+    </h2>
+
+    <h2>0000000</h2>
+    <h1>最后一个</h1>
+
+  </article>
+</main>
+</body>
+</html>

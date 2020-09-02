@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <style>
+     div{
+         border: 1px solid #ddd;
+         width: 150px;
+     }
+     div>input[type='text']{
+         display: inline-block;
+         border: none;
+         outline: none;
+     }
+     div>input[type='text']+span:after{
+         content: 'abc';
+     }
+  </style>
+</head>
+<body>
+<div>
+  <input type="text">
+  <span></span>
+
+</div>
+</body>
+</html>

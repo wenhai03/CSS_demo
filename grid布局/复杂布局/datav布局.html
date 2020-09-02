@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: 150px 150px 150px;
+      grid-gap: 5px;
+
+      grid-template-areas:
+              "a a a b b b b b b c c c"
+              "d d d b b b b b b e e e"
+              "f f f g g g g g g g g g"
+    }
+    .a{
+      background-color: #1cc2c1;
+      grid-area: a;
+    }
+    .b{
+      background-color: #7fc280;
+      grid-area: b;
+    }
+    .c{
+      background-color: #c29fb2;
+      grid-area: c;
+    }
+    .d{
+      background-color: #3130c2;
+      grid-area: d;
+    }
+    .e{
+        background-color: #204321;
+        grid-area: e;
+    }
+    .f{
+        background-color: #bc1871;
+        grid-area: f;
+    }
+    .g{
+        background-color: #7c7ba9;
+        grid-area: g;
+    }
+    @media screen and (max-width: 640px) {
+      .container {
+        grid-template-areas:
+                "m m m m m m h h h h h h"
+                "c c c c c c c c c c c c"
+                "f f f f f f f f f f f f";
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="a">AA</div>
+  <div class="b">BB</div>
+  <div class="c">CC</div>
+  <div class="d">DD</div>
+  <div class="e">EE</div>
+  <div class="f">FF</div>
+  <div class="g">GG</div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <style>
+     /* 子孙级别的 后代里面的第一个 h2、aside里面h2、span*!
+     article :nth-child(1){
+         color: red
+     }*/
+
+
+     /*子孙级别的 第一个其他不包含*!
+     article :nth-child(2){
+         color: red
+     }*/
+
+     /*!* n包含子孙全部*!
+     article :nth-child(n){
+         color: red
+     }*/
+
+
+     /*!*隔行变色*!
+     main>ul li:nth-child(2n){
+         color: red;
+     }*/
+
+    /*选择前三个*!
+     main>ul li:nth-child(-n+3){
+         color: red;
+     }*/
+
+     /*选择从第几个开始 要注意有空格冒号跟没有冒号的区别*!
+     main>ul li:nth-child(n+2){
+         color: red;
+     }*/
+
+     /*如果里面h1不是上下连接的，会选择不到，用nth-of-type*!
+     article h1:nth-child(2){
+         color: red;
+     }*/
+
+     /*article下所有h1的第二个*/
+     article h1:nth-of-type(2){
+         color: red;
+     }
+  </style>
+</head>
+<body>
+<main>
+  <ul>
+    <li>
+      <span>li1</span>
+      <span>li1</span>
+      <span>li1</span>
+      <span>li1</span>
+    </li>
+    <li>
+      <span>li2</span>
+      <span>li2</span>
+      <span>li2</span>
+      <span>li2</span>
+    </li>
+    <li>li3</li>
+    <li>li4</li>
+  </ul>
+
+  <article>
+    <h1>h2选择</h1>
+    <aside>
+      <h1>哈哈哈哈</h1>
+      <h2>
+        h2选择器1111
+      </h2>
+    </aside>
+    <div>
+      <span>我是span元素</span>
+      <span>我是span元素</span>
+    </div>
+
+    <h2>
+      h2选择器2222
+    </h2>
+
+    <h1>0000000</h1>
+
+  </article>
+</main>
+</body>
+</html>

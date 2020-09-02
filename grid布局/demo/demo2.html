@@ -3,43 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
+  <!--
+    grid-template-columns: repeat(auto-fill, 200px)
+    表示自动填充，让一行（或者一列）中尽可能的容纳更多的单元格。
+    grid-template-columns: repeat(auto-fill, 200px) 表示列宽是 200 px，
+    但列的数量是不固定的，只要浏览器能够容纳得下，就可以放置元素
 
+  -->
+  <!--
+  minmax() 函数：我们有时候想给网格元素一个最小和最大的尺寸，
+  minmax() 函数产生一个长度范围，表示长度就在这个范围之中都可以应用到网格项目中。
+  它接受两个参数，分别为最小值和最大值。grid-template-columns: 1fr 1fr minmax(300px, 2fr) 的意思是，
+  第三个列宽最少也是要 300px，但是最大不能大于第一第二列宽的两倍
+  -->
+
+  <!--
+    可以轻易实现三列或者两列布局。
+    grid-template-columns: 100px auto 100px 表示第一第三列为 100px，
+    中间由浏览器决定长度，
+  -->
   <style>
-    .wrapper{
-      display: grid;
-      /*声明行间距和列间距*/
-      grid-gap: 20px;
-      /*声明列的宽度*/
-      /*grid-template-columns: repeat(3, 200px);*/
-      /*grid-template-columns: repeat(auto-fill, 200px);*/
-      grid-template-columns: 200px 1fr 2fr;
-      /*声明行的高度*/
-      grid-template-rows: 100px 200px;
-      /*grid-auto-rows: minmax(100px, auto);*/
-    }
-    .one {
-      background: #19CAAD;
-    }
-    .two {
-      background: #8CC7B5;
-    }
-    .three {
-      background: #D1BA74;
-    }
-    .four {
-      background: #BEE7E9;
-    }
-    .five {
-      background: #E6CEAC;
-    }
-    .six {
-      background: #ECAD9E;
-    }
-    .item {
-      text-align: center;
-      font-size: 200%;
-      color: #fff;
-    }
+      .wrapper {
+          display: grid;
+          /*声明行间距和列间距*/
+          grid-gap: 20px;
+          /*声明列的宽度*/
+          /*grid-template-columns: 1fr 1fr minmax(300px, 2fr);*/
+          grid-template-columns: 100px auto 100px;
+          /*grid-template-columns: repeat(3, 200px);*/
+          /*grid-template-columns: repeat(auto-fill, 200px);*/
+          /*grid-template-columns: 200px 1fr 2fr;*/
+          /*声明行的高度*/
+          /*grid-template-rows: 100px 200px;*/
+          /*grid-auto-rows: minmax(100px, auto);*/
+      }
+
+      .one {
+          background: #19CAAD;
+      }
+
+      .two {
+          background: #8CC7B5;
+      }
+
+      .three {
+          background: #D1BA74;
+      }
+
+      .four {
+          background: #BEE7E9;
+      }
+
+      .five {
+          background: #E6CEAC;
+      }
+
+      .six {
+          background: #ECAD9E;
+      }
+
+      .item {
+          text-align: center;
+          font-size: 200%;
+          color: #fff;
+      }
   </style>
 </head>
 <body>

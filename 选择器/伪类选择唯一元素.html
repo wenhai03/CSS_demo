@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <style>
+
+     /*所有儿子类型中是h2的最后一个*!
+     article :only-child{
+         color: red
+     }*/
+
+     /*只有h1元素*/
+     article>h1:only-of-type{
+         color: red
+     }
+
+  </style>
+</head>
+<body>
+<main>
+  <article>
+    <h2>首尾选择</h2>
+    <h1>首尾选择</h1>
+
+    <aside>
+      <h2>
+        h2选择器1111
+      </h2>
+    </aside>
+    <div>
+      <span>我是span元素</span>
+    </div>
+
+    <h2>
+      h2选择器2222
+    </h2>
+
+    <h2>0000000</h2>
+
+  </article>
+</main>
+
+<script>
+
+</script>
+</body>
+</html>
