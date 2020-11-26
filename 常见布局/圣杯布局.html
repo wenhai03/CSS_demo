@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+      html, body{
+          height: 100%;
+      }
+      body{
+          display: flex;
+          flex-direction: column;
+      }
+      section{
+          display: flex;
+          flex: 1;
+      }
+      header {
+          background: wheat;
+      }
+
+      .main {
+          background: pink;
+          flex: 1;
+      }
+      .left, .right{
+          flex: 0 0 100px;
+      }
+      .left {
+          background: aliceblue;
+          order: -1;
+      }
+
+      .right {
+          background: aqua;
+      }
+
+      footer {
+          background: darkcyan;
+      }
+
+      @media (max-width: 768px) {
+          section{
+              flex-direction: column;
+
+          }
+      }
+  </style>
+</head>
+<body>
+<header>头头是道</header>
+<section>
+  <div class="main">主要内容区域</div>
+  <div class="left">左边内容</div>
+  <div class="right">右边内容</div>
+</section>
+<footer>
+  海底捞月
+</footer>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    body{
+        height: 100%;
+        background: cornflowerblue;
+    }
+    section{
+        display: flex;
+        flex-direction: column;
+    }
+    .content{
+        display: flex;
+        flex: 1;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .content>div{
+        border-radius: 10px;
+        flex: 0 0 180px;
+        height: 180px;
+    }
+    .content>div:hover{
+        align-self: stretch;
+    }
+    .content>div:nth-of-type(1){
+        background: aqua;
+    }
+    .content>div:nth-of-type(2){
+        background: rebeccapurple;
+    }
+    .content>div:nth-of-type(3){
+        background: wheat;
+    }
+    .content>div:nth-of-type(4){
+        background: violet;
+    }
+  </style>
+</head>
+<body>
+<section>
+  <h1>专业课程</h1>
+  <div class="content">
+    <div>
+      <h3>土木专业</h3>
+      <span>30天学会搬砖</span>
+    </div>
+    <div>
+      <h3>物流专业</h3>
+      <span>30天学会送快递</span>
+    </div>
+    <div>
+      <h3>会计专业</h3>
+      <span>30天学会打算盘</span>
+    </div>
+    <div>
+      <h3>机械专业</h3>
+      <span>30天学会挖矿</span>
+    </div>
+  </div>
+</section>
+</body>
+</html>
