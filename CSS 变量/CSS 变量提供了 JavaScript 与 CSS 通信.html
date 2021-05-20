@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+      /* 在 body 选择器中声明了两个变量  */
+      body {
+          --primary-color: red;
+          /* 变量名大小写敏感，--primary-color 和 --PRIMARY-COLOR 是两个不同变量 */
+          --PRIMARY-COLOR: initial;
+      }
+
+      /** 同一个 CSS 变量，可以在多个选择器内声明。优先级高的会替换优先级低的 */
+      main {
+          --primary-color: blue;
+      }
+
+      /** 使用 CSS 变量 */
+      .text-primary {
+          /* var() 函数用于读取变量。 */
+          color: var(--primary-color)
+      }
+  </style>
+</head>
+<body>
+<!-- 呈现黄色字体  -->
+<div class="text-primary">red</div>
+
+<!-- 呈现蓝色字体，main 选择器定义的颜色  -->
+<main id='primary' class="text-primary">blue</main>
+
+
+</body>
+
+
+<script>
+  document.body.style.setProperty('--primary-color', 'yellow');
+</script>
+</html>
