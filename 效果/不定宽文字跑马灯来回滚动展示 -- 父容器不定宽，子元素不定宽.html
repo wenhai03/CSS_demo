@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+      .wrap {
+          position: relative;
+          width: 10vw;
+          height: 100vh;
+          background: #ddd;
+          overflow: hidden;
+          resize: horizontal;
+      }
+
+      .wrap::-webkit-scrollbar {
+          width: 200px;
+          height: 200px;
+      }
+
+      span {
+          position: relative;
+          display: inline-block;
+          white-space: nowrap;
+          padding: 5px;
+          line-height: 24px;
+          cursor: pointer;
+          transition: .5s all;
+          will-change: left, transform;
+      }
+
+      .scroll:hover {
+          animation: move 2s infinite alternate linear;
+      }
+
+      @keyframes move {
+          0% {
+              left: 0;
+              transform: translate(0, 0);
+          }
+          100% {
+              left: 100%;
+              transform: translate(-100%, 0);
+          }
+      }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <span class="scroll" title="Overflow scorll left to right Overflow">Overflow scorll left to right Overflow</span>
+  <span class="scroll" title="AAA BBB CCC DDD EEE FFF DDD GGG">AAA BBB CCC DDD EEE FFF DDD GGG</span>
+  <span class="scroll" title="AAA BBB CCC">AAA BBB CCC</span>
+  <span class="scroll" title="AAA BBB CCC DDD EEE FFF DDD GGG HHH III">AAA BBB CCC DDD EEE FFF DDD GGG HHH III</span>
+</div>
+</body>
+</html>

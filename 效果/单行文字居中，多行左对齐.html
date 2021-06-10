@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+      /* width:fit-content+margin:auto */
+      .content{
+          background: #fff;
+          border-radius: 5px;
+          box-shadow: 3px 3px 15px rgba(0,0,0,.1);
+          padding: 15px;
+          font-size: 14px;
+          margin: 20px;
+      }
+      .text{
+          width: fit-content;
+          margin: 0 auto;
+      }
+  </style>
+</head>
+<body>
+<!--
+/* width:fit-content+margin:auto */
+width:fit-content可以实现元素收缩效果的同时，保持原本的block水平状态，
+于是就可以直接使用margin:auto实现元素向内自适应同时的居中效果了。
+      .content{
+          background: #fff;
+          border-radius: 5px;
+          box-shadow: 3px 3px 15px rgba(0,0,0,.1);
+          padding: 15px;
+          font-size: 14px;
+          margin: 20px;
+      }
+      .text{
+          width: fit-content;
+          margin: 0 auto;
+      }
+<div class="content"><p class="text">这段文字能不能这样判断一下，当文字不足一行时，让它居中显示，当文字超过一行就让它居左</p></div>
+
+
+-->
+
+<!--
+
+.content{
+      background: #fff;
+      border-radius: 5px;
+      box-shadow: 3px 3px 15px rgba(0,0,0,.1);
+      padding: 15px;
+      font-size: 14px;
+      margin: 20px;
+  }
+  p::first-line{
+      text-align-last: left;
+  }
+
+<div class="content"><p>这段文字能不能这样判断一下，当文字不足一行时，让它居中显示，当文字超过一行就让它居左</p></div>
+
+-->
+
+<!--
+      /* 父级text-align:center，子级inline-block+text-align:left 兼容性好 */
+      .content {
+          text-align: center;
+      }
+
+      .text {
+          display: inline-block;
+          text-align: left;
+      }
+
+<div class="content">
+  <span class="text">这段文字能不能这样判断一下，当文字不足一行时，让它居中显示，当文字超过一行就让它居左</span>
+</div>-->
+<!---->
+</body>
+</html>
