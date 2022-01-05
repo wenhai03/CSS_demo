@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<canvas id="" width="300px" height="300px" style="border: 1px solid red"></canvas>
+
+<script>
+  var ctx = document.querySelector('canvas').getContext('2d')
+
+  ctx.save()
+  ctx.fillStyle='blue'
+  ctx.fillRect(0, 0, 150, 150)
+  ctx.save() // 保存第一次的状态(蓝色) 压入瓶子内第一个
+
+  ctx.fillStyle='red'
+  ctx.fillRect(15, 15, 120, 120)
+  ctx.save() // 保存第一次的状态(红色) 压入瓶子内第二个
+
+  ctx.fillStyle='green'
+  ctx.fillRect(30, 30, 90, 90)
+
+  ctx.restore() // 先拿瓶子最上面的那个也就是红色
+  ctx.fillRect(45, 45, 60, 60)
+
+  ctx.restore() // 瓶子的最开始那个颜色
+  ctx.fillRect(55, 55, 40, 40)
+
+  ctx.restore()
+
+  // ctx.stroke()
+
+</script>
+</body>
+</html>

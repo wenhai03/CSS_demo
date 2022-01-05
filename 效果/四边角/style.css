@@ -1,0 +1,17 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: #f7f7fd;
+}
+
+.frame-line {
+  fill: transparent;
+  stroke-width: 8px;
+  stroke: rgb(59, 180, 255);
+  stroke-dasharray: 50%;
+  stroke-dashoffset: 25%;
+    border: 1px solid #333;
+}

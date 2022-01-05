@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+
+      body {
+          width: 100vw;
+          min-height: 100vh;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          gap: 20px;
+          font-family: "Exo", Arial, sans-serif;
+          background-color: #f7f7f7;
+
+          padding: 20px;
+      }
+
+      section {
+          width: 100%;
+          margin: 0 auto;
+          max-width: 40vw;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          box-shadow: 0 0 0 6px rgb(0 0 0 / 13%);
+          border-radius: 3px;
+          gap: 20px;
+      }
+
+      .container {
+          box-shadow: 0 0 0 1px #f36;
+          position: relative;
+          gap: 20px;
+      }
+
+      .box {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 10px;
+          background-color: #f7f7f7;
+          box-shadow: 0 0 0 1px #09f;
+          white-space: nowrap;
+      }
+
+      .box:not(:last-child) {
+          margin-bottom: 20px;
+      }
+
+      .box:nth-child(1) {
+          background-color: #f1c2c6;
+      }
+
+      .box:nth-child(2) {
+          background-color: #dac2f1;
+      }
+
+      .box:nth-child(3) {
+          background-color: #ccf1c2;
+      }
+
+      .box:nth-child(4) {
+          background-color: #c2e9f1;
+      }
+
+      form {
+          width: 100%;
+      }
+      input[type="range"] {
+          width: 100%;
+      }
+
+      .container {
+          --width: 100%;
+          width: var(--width);
+      }
+
+      .box {
+          aspect-ratio: 16/9;
+      }
+
+      .fixed__height {
+          height: 100px;
+      }
+
+      .fixed__width {
+          width: 200px;
+      }
+
+      .fixed__height__width {
+          width: 200px;
+          height: 100px;
+      }
+
+  </style>
+</head>
+<body>
+<section>
+  <div class="container">
+<!--    <div class="box auto"> 16 / 9</div>-->
+    <div class="box fixed__height">16 / 9</div>
+    <div class="box fixed__width">16 / 9</div>
+    <div class="box fixed__height__width">16 / 9</div>
+  </div>
+</section>
+</body>
+</html>

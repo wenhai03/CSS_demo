@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<canvas id="" width="300px" height="300px" style="border: 1px solid red"></canvas>
+
+<script>
+  var ctx = document.querySelector('canvas').getContext('2d')
+
+  ctx.font = '1.4vh 微软雅黑'
+  // text – 一个DOMString指定要呈现到上下文中的文本字符串。 使用由font 、textAlign 、 textBaseline和direction指定的设置呈现文本。
+  // x – 开始绘制文本的点的 x 轴坐标，以像素为单位。
+  // y – 开始绘制文本的基线的 y 轴坐标，以像素为单位。
+  // maxWidth – 文本一次渲染的最大像素宽度。 如果未指定，则文本的宽度没有限制。 但是，如果提供了此值，用户代理将调整字距调整，选择更水平压缩的字体（如果可用或可以在不损失质量的情况下生成），或缩小到较小的字体大小以适应指定宽度的文本。
+
+  ctx.fillStyle='red'
+  ctx.fillText(`这个画布的文本`, 50, 50, 50)
+
+  ctx.strokeStyle = 'red'
+
+  ctx.stroke()
+
+</script>
+</body>
+</html>

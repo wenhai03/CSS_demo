@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<canvas id="" width="300px" height="300px" style="border: 1px solid red"></canvas>
+
+<script>
+  // arc(x,y,半径，开始的角度，结束的角度，true表示逆时针(默认false))
+  // x – 圆弧中心的水平坐标。
+  // y – 圆弧中心的垂直坐标。
+  // radius - 弧的半径。 必须是积极的。
+  // startAngle – 以弧度为单位的弧开始的角度，从正 x 轴测量。
+  // endAngle – 弧以弧度结束的角度，从正 x 轴测量。
+  // anticlockwise – 一个可选的Boolean 。 如果为true ，则在开始和结束角度之间逆时针绘制圆弧。 默认值为false （顺时针）。
+  var ctx =  document.querySelector('canvas').getContext('2d')
+
+  ctx.beginPath()
+  ctx.arc(75, 75, 50, 0, Math.PI*2, true)
+  ctx.moveTo(110, 75)
+  ctx.arc(75, 75, 35, 0, Math.PI, false)
+
+  ctx.moveTo(65, 65)
+  ctx.arc(60, 65, 5, 0, Math.PI*2, false)
+
+  ctx.moveTo(95, 65)
+  ctx.arc(90, 65, 5, 0, Math.PI*2, false)
+
+  ctx.stroke()
+
+</script>
+</body>
+</html>

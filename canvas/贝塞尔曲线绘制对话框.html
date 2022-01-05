@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<canvas id="" width="300px" height="300px" style="border: 1px solid red"></canvas>
+
+<script>
+  var ctx =  document.querySelector('canvas').getContext('2d')
+
+  ctx.beginPath()
+  ctx.moveTo(75, 25)
+  // quadraticCurveTo 它需要两个点：第一个是控制点，第二个是终点。
+  // 起点是当前路径中的最新点，可以在创建二次贝塞尔曲线之前使用moveTo()进行更改。
+  ctx.quadraticCurveTo(25, 25, 25, 62.5)
+  ctx.quadraticCurveTo(25, 100, 50, 100)
+  ctx.quadraticCurveTo(50, 120, 30, 120)
+  ctx.quadraticCurveTo(60, 120, 65, 100)
+  ctx.quadraticCurveTo(125, 100, 125, 62.5)
+  ctx.quadraticCurveTo(125, 25, 75, 25)
+
+  ctx.strokeStyle='red'
+
+  ctx.stroke()
+
+</script>
+</body>
+</html>

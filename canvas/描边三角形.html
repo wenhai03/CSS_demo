@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<canvas id="" width="300px" height="300px" style="border: 1px solid red"></canvas>
+
+<script>
+/*
+* 创建路径起始点
+* 使用画布的各种方法画出路径
+* 把路径封闭
+* 一旦路劲生成，你就能通过描边或填充来渲染图像
+* */
+
+var ctx =  document.querySelector('canvas').getContext('2d')
+// 1 开始路径
+ctx.beginPath()
+
+// 坐标位移
+// ctx.translate(100, 100);
+// 旋转45度
+// ctx.rotate(20 * Math.PI / 180);
+// 登录状态下不会出现这行文字，点击页面右上角一键登录
+
+// 2 落点
+ctx.moveTo(100, 100)
+// 3 画路径
+ctx.lineTo(80, 170)
+ctx.lineTo(120, 170)
+ctx.lineTo(100, 100)
+
+ctx.moveTo(100, 100)
+ctx.lineTo(101, 70)
+// 4 关闭
+ctx.closePath()
+
+ctx.fillStyle='red'
+ctx.strokeStyle='blue'
+// 边框
+ctx.lineWidth=1
+ctx.lineJoin="round"
+
+ctx.fill()
+ctx.stroke()
+
+</script>
+</body>
+</html>

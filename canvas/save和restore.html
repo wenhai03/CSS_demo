@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<canvas id="" width="500px" height="500px" style="border: 1px solid red"></canvas>
+
+<script>
+  var ctx = document.querySelector('canvas').getContext('2d')
+
+  var num = 0
+
+  // setInterval(function (){
+    // ctx.translate(60, 30)
+    ctx.clearRect(0, 0, 500, 500)
+    num++
+    ctx.rotate(num * Math.PI / 180) // 顺时针
+    ctx.fillRect(200, 200, 100, 100)
+  // }, 3000)
+
+
+</script>
+</body>
+</html>
